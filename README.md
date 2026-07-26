@@ -1,26 +1,32 @@
 -- ContactBook
+
 A contact book application built with Java, JDBC, and MySQL, supporting full CRUD (Create, Read, Update, Delete) operations. Built as a practice project to strengthen JDBC-based database integration and layered application architecture.
 
 -- Overview
+
 ContactBook lets users store, view, update, and delete contact records (name, cell number, email) backed by a MySQL database. The project follows a layered architecture separating database access, business logic to keep concerns isolated and the codebase testable.
 
 -- Features
+
    Create, read, update, and delete contact records
    Lookup contacts by name or cell number
    Combining multiple contact fields
    Centralized exception handling for database operations
 
 --Tech Stack
+
    Language: Java
    Database: MySQL
    Database Access: JDBC (for learning JDBC fundamentals)
 
 -- Prerequisites
+
    Java JDK (11+ recommended)
    MySQL Server
    MySQL JDBC Driver (Connector/J) on the classpath
 
 -- Setup
+
 1. Clone the repository:
    git clone https://github.com/buhletech/contactbook.git
    cd contactbook
