@@ -22,7 +22,7 @@ public class PasswordUtil {
             byte[] hash = digest.digest(password.getBytes());
 
             //Combine salt and hash, then encode to BASSE64
-            String saltBase64 = Base64.getEncoder().encodeToString(hash);
+            String saltBase64 = Base64.getEncoder().encodeToString(salt);
             String hashBase64 = Base64.getEncoder().encodeToString(hash);
 
             return saltBase64 + ":" + hashBase64;

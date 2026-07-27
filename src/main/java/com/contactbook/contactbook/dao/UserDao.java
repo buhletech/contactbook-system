@@ -25,10 +25,10 @@ public class UserDao {
             int rowsInserted = stmt.executeUpdate();
 
             if(rowsInserted > 0){
-                try(ResultSet genderatedKeys = stmt.getGeneratedKeys()){
-                    if(genderatedKeys.next()){
-                        int genderatedId = genderatedKeys.getInt(1);
-                        user.setId(genderatedId);
+                try(ResultSet generatedKeys = stmt.getGeneratedKeys()){
+                    if(generatedKeys.next()){
+                        int generatedId = generatedKeys.getInt(1);
+                        user.setId(generatedId);
                         return user;
                     }
                 }
@@ -102,7 +102,7 @@ public class UserDao {
         }catch(SQLException e){
             throw new DatabaseException("Error while getting all users. " + e.getMessage());
         }
-        return null;
+        return users;
     }
 
     public boolean update(User user){
